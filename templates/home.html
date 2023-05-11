@@ -10,16 +10,24 @@
         height:360px;
         width:100%;
         object-fit:cover;
+        margin-bottom:16px;
       }
     </style>
   </head>
     <body>
+      {% include 'nav.html' %}
+      <img class = " rounded mx-auto -block" id ="banner" src = "https://first-careers-website.cryptofaiz.repl.co/static/banner.jpg" >
       <div class = "container">
         <h1 class ="text-center mt-2 mb-4"> Bright Career's </h1>
-        <img class = "img-fluid." id ="banner" src = "https://first-careers-website.cryptofaiz.repl.co/static/job.banner.jpg" >
-        <h2 class ="text-center mt-2 mb-4"> About Us </h2>
+        <div class="row" style="margin-bottom:20px;">
+          <div class="col-6">
         <p class = "lead">  
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Pharetra diam sit amet nisl suscipit adipiscing bibendum est. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Enim sit amet venenatis urna cursus eget nunc scelerisque. Tincidunt arcu non sodales neque sodales ut etiam sit amet. Ut pharetra sit amet aliquam id diam. Vel orci porta non pulvinar neque laoreet suspendisse interdum. Eleifend donec pretium vulputate sapien nec sagittis aliquam. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Pharetra magna ac placerat vestibulum. Risus ultricies tristique nulla aliquet enim. Enim nec dui nunc mattis enim ut. Amet est placerat in egestas. Et malesuada fames ac turpis egestas sed. Tellus at urna condimentum mattis pellentesque id. Quam nulla porttitor massa id neque aliquam vestibulum morbi. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean. Nunc non blandit massa enim nec dui.</p>
+          </div>
+          <div class="d-none d-md-block col-6">
+          <img src = "https://first-careers-website.cryptofaiz.repl.co/static/people.jpg" style="height:430px; border-radius:10px;" >
+          </div>
+        </div>
         <h2 class ="text-center mt-2 mb-4"> Open Position's </h2>
         <div>
           {% for job in jobs %}
@@ -27,9 +35,10 @@
           {% endfor %}
         </div>
         <div class ="text-center">
-        <button class ="btn btn-primary btn-lg"> Contact us </button>
+        <a href="mailto:helloCareer.ai?subject=Question%20about%20job%20opening%20&body=My%20name%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20Questions%3A%20%3Center%20your%20questions%20here%3E%0D%0A"class ="btn btn-primary btn-lg"> Contact us </a>
           <p class = "mt-4">Copyright 2023, Zebronics</p>
         </div> 
         </div>
+              {% include 'footer.html' %}
     </body>
 </html>
